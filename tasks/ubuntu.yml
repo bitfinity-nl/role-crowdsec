@@ -1,1 +1,41 @@
 
+# Source(s):
+#   - https://docs.crowdsec.net/docs/getting_started/install_crowdsec/
+#   
+- name: "Install APT packages"
+  ansible.builtin.apt:
+    pkg:
+    - curl
+    - gnupg
+    - apt-transport-https
+    update_cache: yes
+    
+- name: "Create directory /etc/apt/keyrings/ for keyrings"
+  ansible.builtin.file:
+    path: /etc/apt/keyrings/
+    state: directory
+    
+- name: "Add CrowdSec GPG key"
+  raw: "curl -fsSL https://packagecloud.io/crowdsec/crowdsec/gpgkey | gpg --dearmor > /etc/apt/keyrings/crowdsec_crowdsec-archive-keyring.gpg"
+  
+- name: "Update APT cache"
+  ansible.builtin.apt:
+    update_cache: yes
+    
+- name: "Transfer crowdsec.list.j2 to /etc/apt/sources.list.d/crowdsec.list"
+  ansible.builtin.template:
+    src: crowdsec.list.j2
+    dest: /etc/apt/sources.list.d/crowdsec.list
+    owner: root
+    group: root
+    mode: '0644'
+    backup: yes
+    force: yes
+    
+- name: "Install CrowdSec"
+  ansible.builtin.apt:
+    pkg:
+    - crowdsec
+    - crowdsec-firewall-bouncer-iptables
+    state: present
+  notify: enroll_crowdsec
