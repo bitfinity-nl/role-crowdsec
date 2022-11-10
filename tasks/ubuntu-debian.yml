@@ -1,4 +1,15 @@
-
+---
+# Title: CrowdSec Agent
+#
+# Author: Bitfinity-NL / L. Rutten
+# Owner: Bitfinity-NL / IT Operations
+#
+# File: tasks/ubuntu.yml
+#
+# Description:
+#   This role contains the configurations steps
+#   for installing CrowdSec agent on Ubuntu/Debian.
+#
 # Source(s):
 #   - https://docs.crowdsec.net/docs/getting_started/install_crowdsec/
 #   
