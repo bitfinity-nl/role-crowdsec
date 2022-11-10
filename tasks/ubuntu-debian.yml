@@ -28,11 +28,7 @@
     
 - name: "Add CrowdSec GPG key"
   raw: "curl -fsSL https://packagecloud.io/crowdsec/crowdsec/gpgkey | gpg --dearmor > /etc/apt/keyrings/crowdsec_crowdsec-archive-keyring.gpg"
-  
-- name: "Update APT cache"
-  ansible.builtin.apt:
-    update_cache: yes
-    
+     
 - name: "Transfer crowdsec.list.j2 to /etc/apt/sources.list.d/crowdsec.list"
   ansible.builtin.template:
     src: crowdsec.list.j2
@@ -42,6 +38,10 @@
     mode: '0644'
     backup: yes
     force: yes
+
+- name: "Update APT cache"
+  ansible.builtin.apt:
+    update_cache: yes
     
 - name: "Install CrowdSec"
   ansible.builtin.apt:
