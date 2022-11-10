@@ -1,7 +1,19 @@
+---
+# Title: CrowdSec Agent
+#
+# Author: Bitfinity-NL / L. Rutten
+# Owner: Bitfinity-NL / IT Operations
+#
+# File: handlers/main.yml
+#
+# Description:
+#   This role contains the configurations 
+#   steps for installing CrowdSec agent.
+#
 
-
-
-
-
-# -- CrowdSec --
+# -- CrowdSec Agent --
+#
+# Variable(s):
+#   crowdsec_console_enroll_key: '<enroll key>'  # This is the enrollment key and can be found at app.crowdsec.net (+, Enroll an Instance).
+#
 crowdsec_console_enroll_key: ''
