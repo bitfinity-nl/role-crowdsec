@@ -2,7 +2,9 @@
 The open source &amp; collaborative security IPS 
 
 
+## Initial setup
 
+### Example playbook
 ```
 - hosts: crowdsec_agent
   become: yes
@@ -18,6 +20,6 @@ The open source &amp; collaborative security IPS
 ```
 
 ## Running after applying role
-- Accept enrollment on app.crowdsec.net;
+- Login on ``app.crowdsec.net`` and accept enrollment;
 - Restart service on host ``systemctl restart crowdsec`` or reboot the host;
 
