@@ -11,3 +11,6 @@
 #   steps for installing CrowdSec agent.
 #
 
+- name: "Install CrowdSec on Ubuntu or Debian systems"
+  include_tasks: ubuntu-debian.yml
+  when: ansible_distribution == "Ubuntu" or ansible_distribution == "Debian"
