@@ -16,4 +16,4 @@
 # Variable(s):
 #   crowdsec_console_enroll_key: '<enroll key>'  # This is the enrollment key and can be found at app.crowdsec.net (+, Enroll an Instance).
 #
-crowdsec_console_enroll_key: ''
+crowdsec_console_enroll_key: 'no_enroll_key'
