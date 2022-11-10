@@ -12,4 +12,4 @@
 #
 - name: "enroll_crowdsec"
   raw: "sudo cscli console enroll {{ crowdsec_console_enroll_key }}"
-  when: crowdsec_console_enroll_key != ""
+  when: crowdsec_console_enroll_key != "no_enroll_key"
