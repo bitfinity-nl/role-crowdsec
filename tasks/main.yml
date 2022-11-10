@@ -1,1 +1,13 @@
 ---
+# Title: CrowdSec Agent
+#
+# Author: Bitfinity-NL / L. Rutten
+# Owner: Bitfinity-NL / IT Operations
+#
+# File: tasks/main.yml
+#
+# Description:
+#   This role contains the configurations 
+#   steps for installing CrowdSec agent.
+#
+
