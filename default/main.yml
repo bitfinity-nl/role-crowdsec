@@ -4,7 +4,7 @@
 # Author: Bitfinity-NL / L. Rutten
 # Owner: Bitfinity-NL / IT Operations
 #
-# File: handlers/main.yml
+# File: defaults/main.yml
 #
 # Description:
 #   This role contains the configurations 
