@@ -1,0 +1,15 @@
+---
+# Title: CrowdSec Agent
+#
+# Author: Bitfinity-NL / L. Rutten
+# Owner: Bitfinity-NL / IT Operations
+#
+# File: handlers/main.yml
+#
+# Description:
+#   This role contains the configurations 
+#   steps for installing CrowdSec agent.
+#
+- name: "enroll_crowdsec"
+  raw: "sudo cscli console enroll {{ crowdsec_console_enroll_key }}"
+  when: crowdsec_console_enroll_key != ""
