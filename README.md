@@ -17,7 +17,7 @@ The open source &amp; collaborative security IPS
   tasks:
 ```
 
-# Running after applying role
+## Running after applying role
 - Accept enrollment on app.crowdsec.net;
 - Restart service on host ``systemctl restart crowdsec`` or reboot the host;
 
